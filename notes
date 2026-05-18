@@ -1,0 +1,72 @@
+#Angular
+Things we will learn in this program.
+1.Components
+2.Modules
+3.Directives
+4.Data Bindings
+5.Pipes
+6.Http Client
+7.Routing
+
+Question- Why Angular?
+Answer- Following are the reasons we choose Angular:
+Cross Browser Support
+Typescript support
+Web components
+Mobile Application
+Better Performance
+
+=> Without refersing page => Single page Application(SPA)- without requesting a new page from the server we update part of the page.
+Dynamically loads HTML content without refreshing.
+Angular using JS/Typescript(recommended).
+
+Angular is component based. Each component is independent.
+Inside a component-
+  1.Logic
+  2.View
+
+
+                              Root Component
+                              /          \
+            Child Component 1       Child Component 2
+             /          \
+Child Component 3     Child Component 4
+
+Angular CLI =ng
+Command to create a new project = ng new <project_name>
+command to build and run on local = ng server --open 
+command to create new component, directive, pip = ng generate <name>
+command to build app = ng build
+
+
+
+Folder structure in Angular :
+node_modules = Node.js creates this folder and puts all the npm modules installed as listed in package.json.
+src/ = All application related files will be stored inside it.
+angular.json =  Angular cli config file.
+package.json = node config file.
+tsconfig.json = typescript configuration file
+
+
+Question= What is component?
+Answer = Basic building block.
+         Separates concern
+         Reuseable
+
+Example = mCart component(Parent)
+  Welcome Component(child)     Login Component(child)
+
+import from '@angular/core'
+@Component is the decorator
+
+Example :
+@Component({
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
+})
+export class LoginComponent implements OnInit {
+  userName:string = "";
+  password:string = "";
+}
+
